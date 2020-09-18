@@ -39,6 +39,7 @@ public class Search extends AppCompatActivity {
     List<Doner> donerList;
     ProgressBar progressBar;
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
