@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Blood</string>
+    <string-array name="Area">
+        <item> Area </item>
+        <item>Adabor</item>
+        <item>Badda</item>
+        <item>Bandar</item>
+        <item>Bangshal</item>
+        <item>Biman Bandar Airport</item>
+        <item>Cantonment</item>
+        <item>Chawkbazar</item>
+        <item>Dakshinkhan</item>
+        <item>Darus Salam </item>
+        <item>Demra</item>
+        <item>Dhanmondi</item>
+        <item>Gazipur Sadar</item>
+        <item>Gendaria </item>
+        <item>Gulshan</item>
+        <item>Hazaribagh</item>
+        <item>Jatrabari </item>
+        <item>Kadamtali </item>
+        <item>Kafrul</item>
+        <item>Kalabagan </item>
+        <item>Kamrangirchar</item>
+        <item>Keraniganj</item>
+        <item>Khilgaon</item>
+        <item>Khilkhet </item>
+        <item>Kotwali</item>
+        <item>Lalbagh</item>
+        <item>Mirpur</item>
+        <item>Mohammadpur</item>
+        <item>Motijheel</item>
+        <item>Narayanganj Sadar</item>
+        <item>New Market</item>
+        <item>Pallabi</item>
+        <item>Paltan</item>
+        <item>Ramna</item>
+        <item>Rampura</item>
+        <item>Sabujbagh</item>
+        <item>Savar</item>
+        <item>Shah Ali mirpur</item>
+        <item>Shahbagh</item>
+        <item>Sher-e-Bangla Nagar</item>
+        <item>Shyampur</item>
+        <item>Sutrapur</item>
+        <item>Tejgaon</item>
+        <item>Tejgaon Industrial Area</item>
+        <item>Turag</item>
+        <item>Uttara</item>
+        <item>Uttar Khan</item>
+
+    </string-array>
+
+    <string-array name="Blood_Group">
+        <item>Blood Group </item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+
+    </string-array>
+
+    <string name="Registration_preference">com.shakil.firebasefirstnew_Registration_preference</string>
+    <string name="Registration_status_preference">com.shakil.firebasefirstnew_Registration_status_preference</string>
+</resources>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF3356"
+    tools:context=".Home_activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        >
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/male">
+
+    </ImageButton>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/cardview_angle"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/linlay"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nameid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="35dp"
+            android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="Name"
+            android:padding="15dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16dp"
+
+            >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/ageid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="Phone"
+            android:padding="15dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16dp">
+
+        </EditText>
+
+
+        <TextView
+            android:id="@+id/lastdate_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="Last date of donation"
+            android:padding="15dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp">
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_add_circle_black_24dp"
+
+                >
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/bloodgroupid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:spinnerMode="dropdown"
+                android:textSize="15dp"
+
+                >
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp">
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/ic_add_location_black_24dp">
+
+            </TextView>
+
+            <Spinner
+
+                android:id="@+id/spinerid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:spinnerMode="dropdown"
+                android:textSize="15dp"
+
+
+                >
+
+            </Spinner>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/saveid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/textinputborder"
+            android:text="Save Data"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp">
+
+
+        </TextView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/showdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/textinputborder"
+            android:text="Save Data"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp">
+
+
+        </TextView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

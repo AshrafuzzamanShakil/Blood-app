@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="4"
+    tools:context=".Forgot_pass_activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/path1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image1">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Update_lastdate_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:drawablePadding="10dp"
+            android:hint="Last date of donation"
+            android:padding="15dp"
+            android:paddingLeft="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16dp"
+            android:drawableLeft="@drawable/ic_date_range_black_24dp"
+            android:background="@drawable/cardview_angle"
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/Update_date_id"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/textinputborder"
+            android:text="Update"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp">
+
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/path2"
+        android:layout_gravity="right"
+        >
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_id"
+            android:visibility="gone"
+            android:foregroundGravity="center"
+            >
+
+        </ProgressBar>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

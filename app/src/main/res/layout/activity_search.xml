@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".Search">
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <Spinner
+                android:id="@+id/editserch"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:paddingLeft="20dp"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="10dp"
+                android:textSize="15dp"
+                >
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/spinerid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:drawablePadding="5dp"
+                android:padding="15dp"
+                android:paddingLeft="20dp"
+                android:spinnerMode="dropdown"
+                android:textSize="15dp">
+
+            </Spinner>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/Buttonserch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:background="@drawable/textinputborder"
+            android:text="Search ">
+
+        </Button>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+    <ListView
+        android:id="@+id/listviewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+</LinearLayout>

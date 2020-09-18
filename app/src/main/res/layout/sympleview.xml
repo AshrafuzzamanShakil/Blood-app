@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_cardview"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:id="@+id/image"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center"
+                        >
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/bazeid"
+                        android:layout_gravity="center"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+
+                        >
+
+                    </ImageView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="#FFFFFF"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                    android:id="@+id/naid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+
+                    >
+
+                </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Last Donated">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/agid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Last date of donation"
+                        android:textColor="#FFFFFF"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:textColor="#FFFFFF"
+                        >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/areaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="Area"
+                        android:textColor="#FFFFFF"
+                        >
+                    </TextView>
+
+
+
+                </LinearLayout>
+               <LinearLayout
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_gravity="center_vertical"
+                   >
+                   <TextView
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       android:background="@drawable/ic_call_black_24dp"
+                       >
+
+                   </TextView>
+
+                   <TextView
+                       android:id="@+id/bdgroupid"
+                       android:layout_gravity="center"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="A+"
+                       android:textColor="#FFFFFF"
+                       android:textSize="25dp"
+                       android:textStyle="bold">
+
+                   </TextView>
+               </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
