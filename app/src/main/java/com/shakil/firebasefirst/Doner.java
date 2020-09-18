@@ -25,6 +25,7 @@ public class Doner {
         this.number_of_donation=number_of_donation;
     }
 
+
     public String getDate() {
         return date;
     }
