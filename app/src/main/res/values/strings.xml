@@ -66,4 +66,7 @@
 
     <string name="Registration_preference">com.shakil.firebasefirstnew_Registration_preference</string>
     <string name="Registration_status_preference">com.shakil.firebasefirstnew_Registration_status_preference</string>
+    <string name="search">Search</string>
+    <string name="givebutton">GiveButton</string>
+    <string name="update">Update</string>
 </resources>

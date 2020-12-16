@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.shakil.firebasefirst"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -32,8 +32,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.1.0'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.android.support:cardview-v7:29.0.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
     implementation 'com.squareup.picasso:picasso:2.71828'
-
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

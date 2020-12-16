@@ -1,9 +1,5 @@
 package com.shakil.firebasefirst;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,14 +9,19 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailtext,passtext;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    private AdView mAdView;
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -48,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         sharedPreferenceLogin = new SharedPreferenceLogin(this);
+
+
+        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
+
+        );
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
 
         sinup.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     if(mAuth.getCurrentUser().isEmailVerified()){
                         progressBar.setVisibility(View.GONE);
                         sharedPreferenceLogin.writeRegistrationinStatus(true);
-                        startActivity(new Intent(MainActivity.this,Search_Donet.class));
+                        startActivity(new Intent(MainActivity.this,Profile.class));
                         finish();
                         Toast.makeText(getApplicationContext(),"You are logged in.",Toast.LENGTH_SHORT).show();
                     }
@@ -131,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (sharedPreferenceLogin.readRegistrationString()) {
-            Intent intent = new Intent(getApplicationContext(), Search_Donet.class);
+            Intent intent = new Intent(getApplicationContext(), Profile.class);
             startActivity(intent);
             finish();
         }

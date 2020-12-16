@@ -176,7 +176,7 @@
 
         </TextView>
         </LinearLayout>
-        <TextView
+            <TextView
             android:id="@+id/showdata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -192,10 +192,26 @@
             android:textSize="15dp">
 
 
-        </TextView>
+            </TextView>
+
+
+         </LinearLayout>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4187023831811200/8726220996">
+        </com.google.android.gms.ads.AdView>
 
     </LinearLayout>
-    </LinearLayout>
+
+
+
+
 
 
 </ScrollView>

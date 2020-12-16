@@ -11,11 +11,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1"
-        android:gravity="center"
         android:background="@drawable/path1"
-        >
+        android:gravity="center"
+        android:orientation="vertical">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,16 +24,14 @@
         </ImageView>
 
 
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="2"
         android:gravity="center"
-        >
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/editText"
@@ -41,14 +39,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:padding="15dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
             android:hint="Email"
+            android:padding="15dp"
             android:paddingLeft="20dp"
             android:textColor="#000000"
             android:textColorHint="#000000"
             android:textSize="15dp"
-            android:drawableLeft="@drawable/ic_email_black_24dp"
-            android:drawablePadding="5dp"
 
 
             />
@@ -58,56 +56,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="35dp"
-            android:padding="15dp"
-            android:textSize="15dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
             android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
             android:drawablePadding="5dp"
-            android:layout_marginTop="10dp"
-            />
-
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="15dp" />
 
 
         <Button
             android:id="@+id/button2"
             android:layout_width="120dp"
             android:layout_height="40dp"
+            android:layout_marginTop="75dp"
             android:background="@drawable/textinputborder"
             android:text="Sign Up"
             android:textColor="#FFFFFF"
-            android:textSize="15dp"
-            android:layout_marginTop="75dp"
-            />
-
+            android:textSize="15dp" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_weight="1"
-        android:gravity="center"
         android:background="@drawable/path2"
-        >
+        android:gravity="bottom"
+        android:orientation="vertical">
+
         <ProgressBar
+            android:id="@+id/progressid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/progressid"
-            android:visibility="gone"
             android:foregroundGravity="center"
-            >
+            android:visibility="gone">
 
         </ProgressBar>
-
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-4187023831811200/8726220996">
+        </com.google.android.gms.ads.AdView>
 
 
     </LinearLayout>
-
 
 
 </LinearLayout>

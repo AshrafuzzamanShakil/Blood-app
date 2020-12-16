@@ -14,6 +14,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +35,7 @@ public class Update_date extends AppCompatActivity {
     private ProgressBar progressBar;
     DatePickerDialog datePickerDialog;
     private int number;
+    private AdView mAdView;
 
 
 
@@ -46,6 +50,14 @@ public class Update_date extends AppCompatActivity {
         progressBar=findViewById(R.id.progress_id);
         update_date_text=findViewById(R.id.Update_lastdate_id);
         update_button=findViewById(R.id.Update_date_id);
+
+        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
+
+        );
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         update_date_text.setOnClickListener(new View.OnClickListener() {

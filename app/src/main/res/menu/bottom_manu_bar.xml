@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/SerchButton"
+    android:title="@string/search"
+    android:icon="@drawable/ic_search_black_24dp"
+    >
+
+</item>
+    <item
+        android:id="@+id/GiveButton"
+        android:title="@string/givebutton"
+        android:background="@drawable/giveblood"
+        android:icon="@drawable/logo"
+        >
+
+    </item>
+    <item
+    android:id="@+id/update_id"
+    android:title="@string/update"
+    android:icon="@drawable/ic_system_update_alt_black_24dp"
+    >
+
+</item>
+    <item
+        android:id="@+id/feedback"
+        android:title="@string/update"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        >
+
+    </item>
+
+
+
+</menu>

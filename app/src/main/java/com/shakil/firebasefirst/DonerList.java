@@ -50,7 +50,7 @@ public class DonerList extends ArrayAdapter<Doner> {
         try {
             if(doner.getImagepath().toString().contentEquals("shakil"))
             {
-                imageView.setImageResource(R.drawable.account_circle_black_24dp);
+                imageView.setImageResource(R.drawable.male);
             }
             else {
                 Picasso.get().load(doner.getImagepath().toString()).into(imageView);

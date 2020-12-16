@@ -22,6 +22,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -57,6 +60,7 @@ public class Home_activity extends AppCompatActivity {
     DatePickerDialog datePickerDialog;
     LinearLayout linearLayout;
     private int number_of_donation=0;
+    private AdView mAdView;
 
 
 
@@ -80,7 +84,15 @@ public class Home_activity extends AppCompatActivity {
         bloodGroup = findViewById(R.id.bloodgroupid);
 
         linearLayout=findViewById(R.id.linlay);
-        show=findViewById(R.id.showdata);
+
+
+        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
+
+        );
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Area, R.layout.spiner_layout);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);

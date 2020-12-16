@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,7 +26,8 @@ public class Search_Donet extends AppCompatActivity {
 
     Button serchButton,GiveButton,Update;
     FirebaseAuth mauth;
-    SharedPreferenceLogin sharedPreferenceLogin;
+    private AdView mAdView;
+
     DatabaseReference databaseReference;
 
     @Override
@@ -36,7 +40,15 @@ public class Search_Donet extends AppCompatActivity {
          GiveButton=findViewById(R.id.GiveButton);
          Update=findViewById(R.id.update_id);
          mauth=FirebaseAuth.getInstance();
-        sharedPreferenceLogin = new SharedPreferenceLogin(this);
+
+
+        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
+
+        );
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         serchButton.setOnClickListener(new View.OnClickListener() {
              @Override
@@ -78,26 +90,5 @@ public class Search_Donet extends AppCompatActivity {
              }
          });
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.log_out,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.logoutId)
-        {
-            sharedPreferenceLogin.writeRegistrationinStatus(false);
-            startActivity(new Intent(Search_Donet.this,MainActivity.class));
-            finish();
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 }
