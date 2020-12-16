@@ -60,7 +60,7 @@ public class Home_activity extends AppCompatActivity {
     DatePickerDialog datePickerDialog;
     LinearLayout linearLayout;
     private int number_of_donation=0;
-    private AdView mAdView;
+
 
 
 
@@ -82,17 +82,9 @@ public class Home_activity extends AppCompatActivity {
         save = findViewById(R.id.saveid);
         spinner = findViewById(R.id.spinerid);
         bloodGroup = findViewById(R.id.bloodgroupid);
-
+        show=findViewById(R.id.showdata);
         linearLayout=findViewById(R.id.linlay);
 
-
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
-
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Area, R.layout.spiner_layout);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -106,8 +98,8 @@ public class Home_activity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     linearLayout.setVisibility(View.GONE);
-                    show.setVisibility(View.VISIBLE);
                     imageButton.setVisibility(View.GONE);
+                    show.setVisibility(View.VISIBLE);
                     show.setText("Your data is already saved.");
 
 
