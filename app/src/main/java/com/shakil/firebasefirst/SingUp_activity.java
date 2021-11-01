@@ -43,7 +43,6 @@ public class SingUp_activity extends AppCompatActivity {
         sinup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressBar.setVisibility(View.VISIBLE);
                 Registration();
 
             }
@@ -83,12 +82,14 @@ public class SingUp_activity extends AppCompatActivity {
             return;
 
         }
+        progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+
                 if(task.isSuccessful())
                 {
+                    progressBar.setVisibility(View.GONE);
                     mAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -105,6 +106,7 @@ public class SingUp_activity extends AppCompatActivity {
 
 
                 else {
+                    progressBar.setVisibility(View.GONE);
                     if(task.getException() instanceof FirebaseAuthUserCollisionException)
                     {
                         Toast.makeText(getApplicationContext(),"Already Registerd.",Toast.LENGTH_LONG).show();
@@ -116,6 +118,7 @@ public class SingUp_activity extends AppCompatActivity {
 
                     else
                     {
+                        progressBar.setVisibility(View.GONE);
                         Toast.makeText(getApplicationContext(),"Sing Up Unsuccssfull",Toast.LENGTH_LONG).show();
                     }
                 }
