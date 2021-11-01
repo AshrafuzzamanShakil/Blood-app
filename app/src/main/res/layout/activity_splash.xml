@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/splash"
     android:gravity="bottom|center"
-    tools:context=".splash">
+    tools:context=".SharedPreference.splash">
 
 
 

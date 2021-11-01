@@ -1,7 +1,9 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.SharedPreference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.shakil.firebasefirst.R;
 
 public class SharedPreferenceLogin {
     private SharedPreferences sharedPreferences;

@@ -1,4 +1,4 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.shakil.firebasefirst.R;
 
 public class SingUp_activity extends AppCompatActivity {
     EditText emailtext,passtext;
@@ -96,7 +97,7 @@ public class SingUp_activity extends AppCompatActivity {
                             if(task.isSuccessful())
                             {
                                 Toast.makeText(getApplicationContext(),"Sing up is Successfull.Check your email to varify and login.",Toast.LENGTH_LONG).show();
-                                Intent i=new Intent(SingUp_activity.this,MainActivity.class);
+                                Intent i=new Intent(SingUp_activity.this, MainActivity.class);
                                 startActivity(i);
                                 finish();
                             }

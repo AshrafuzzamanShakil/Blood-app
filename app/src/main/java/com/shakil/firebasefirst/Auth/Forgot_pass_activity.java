@@ -1,4 +1,4 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Auth;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -20,6 +19,7 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.shakil.firebasefirst.R;
 
 public class Forgot_pass_activity extends AppCompatActivity {
 
@@ -65,7 +65,7 @@ public class Forgot_pass_activity extends AppCompatActivity {
                         {
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(getApplicationContext(),"Check Your Email To Reset Your Password.",Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(Forgot_pass_activity.this,MainActivity.class));
+                            startActivity(new Intent(Forgot_pass_activity.this, MainActivity.class));
                             finish();
                         }
                         else

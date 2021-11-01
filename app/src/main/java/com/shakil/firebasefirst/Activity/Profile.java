@@ -1,4 +1,4 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +22,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mikhaellopez.circularimageview.CircularImageView;
+import com.shakil.firebasefirst.Adapter.Class.Doner;
+import com.shakil.firebasefirst.Auth.MainActivity;
+import com.shakil.firebasefirst.R;
+import com.shakil.firebasefirst.SharedPreference.SharedPreferenceLogin;
 import com.squareup.picasso.Picasso;
 
 public class Profile extends AppCompatActivity {
@@ -63,7 +67,7 @@ public class Profile extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Profile.this,Search_Donet.class));
+                startActivity(new Intent(Profile.this, Search_Donet.class));
 
             }
         });
@@ -119,7 +123,7 @@ public class Profile extends AppCompatActivity {
         if(item.getItemId()==R.id.logoutId)
         {
             sharedPreferenceLogin.writeRegistrationinStatus(false);
-            startActivity(new Intent(Profile.this,MainActivity.class));
+            startActivity(new Intent(Profile.this, MainActivity.class));
             finish();
 
         }

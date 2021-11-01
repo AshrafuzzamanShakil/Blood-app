@@ -1,4 +1,4 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Auth;
 
 import android.content.Intent;
 import android.os.Build;
@@ -17,12 +17,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.messaging.FirebaseMessaging;
+import com.shakil.firebasefirst.Activity.Profile;
+import com.shakil.firebasefirst.R;
+import com.shakil.firebasefirst.SharedPreference.SharedPreferenceLogin;
 
 public class MainActivity extends AppCompatActivity {
     EditText emailtext,passtext;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         sinup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,SingUp_activity.class));
+                startActivity(new Intent(MainActivity.this, SingUp_activity.class));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         forgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Forgot_pass_activity.class));
+                startActivity(new Intent(MainActivity.this, Forgot_pass_activity.class));
 
             }
         });
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                     if(mAuth.getCurrentUser().isEmailVerified()){
                         progressBar.setVisibility(View.GONE);
                         sharedPreferenceLogin.writeRegistrationinStatus(true);
-                        startActivity(new Intent(MainActivity.this,Profile.class));
+                        startActivity(new Intent(MainActivity.this, Profile.class));
                         finish();
                         Toast.makeText(getApplicationContext(),"You are logged in.",Toast.LENGTH_SHORT).show();
                     }

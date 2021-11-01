@@ -1,4 +1,4 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +22,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.shakil.firebasefirst.Adapter.Class.Doner;
+import com.shakil.firebasefirst.R;
 
 import java.util.Calendar;
 
@@ -108,7 +109,7 @@ public class Update_date extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
 
                         Toast.makeText(getApplicationContext(),"Date Updated",Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Update_date.this,Search_Donet.class));
+                        startActivity(new Intent(Update_date.this, Search_Donet.class));
                         finish();
 
                     }

@@ -1,30 +1,27 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Adapter;
 
 import android.app.Activity;
-import android.content.Context;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.shakil.firebasefirst.Adapter.Class.Doner;
+import com.shakil.firebasefirst.R;
 import com.squareup.picasso.Picasso;
 
-import java.util.Date;
 import java.util.List;
 
 public class DonerList extends ArrayAdapter<Doner> {
     private Activity context;
     List<Doner>donerList;
     public DonerList(Activity context,List<Doner>donerList){
-        super(context,R.layout.sympleview,donerList);
+        super(context, R.layout.sympleview,donerList);
         this.context=context;
         this.donerList=donerList;
 

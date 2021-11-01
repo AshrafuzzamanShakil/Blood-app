@@ -1,15 +1,12 @@
-package com.shakil.firebasefirst;
+package com.shakil.firebasefirst.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -21,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.shakil.firebasefirst.R;
 
 public class Search_Donet extends AppCompatActivity {
 
@@ -53,7 +51,7 @@ public class Search_Donet extends AppCompatActivity {
         serchButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 startActivity(new Intent(Search_Donet.this,Search.class));
+                 startActivity(new Intent(Search_Donet.this, Search.class));
 
 
              }
@@ -61,7 +59,7 @@ public class Search_Donet extends AppCompatActivity {
          GiveButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 startActivity(new Intent(Search_Donet.this,Home_activity.class));
+                 startActivity(new Intent(Search_Donet.this, Home_activity.class));
 
              }
          });
