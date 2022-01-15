@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -37,6 +41,10 @@ public class Profile extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,19 +63,28 @@ public class Profile extends AppCompatActivity {
         sharedPreferenceLogin = new SharedPreferenceLogin(this);
 
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
 
-        );
-
+        MobileAds.initialize(this);
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-4187023831811200/3775897827");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
 
 
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Profile.this, Search_Donet.class));
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
 
             }
         });

@@ -52,9 +52,7 @@ public class Update_date extends AppCompatActivity {
         update_date_text=findViewById(R.id.Update_lastdate_id);
         update_button=findViewById(R.id.Update_date_id);
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
+        MobileAds.initialize(this);
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

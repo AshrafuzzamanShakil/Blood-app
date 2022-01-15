@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +28,8 @@ public class Search_Donet extends AppCompatActivity {
     Button serchButton,GiveButton,Update;
     FirebaseAuth mauth;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
+
 
     DatabaseReference databaseReference;
 
@@ -39,19 +44,26 @@ public class Search_Donet extends AppCompatActivity {
          Update=findViewById(R.id.update_id);
          mauth=FirebaseAuth.getInstance();
 
-
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
+        MobileAds.initialize(this);
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-4187023831811200/3775897827");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
         serchButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
+
                  startActivity(new Intent(Search_Donet.this, Search.class));
+                 if (mInterstitialAd.isLoaded()) {
+                     mInterstitialAd.show();
+                 } else {
+                     Log.d("TAG", "The interstitial wasn't loaded yet.");
+                 }
 
 
              }
@@ -60,6 +72,11 @@ public class Search_Donet extends AppCompatActivity {
              @Override
              public void onClick(View view) {
                  startActivity(new Intent(Search_Donet.this, Home_activity.class));
+                 if (mInterstitialAd.isLoaded()) {
+                     mInterstitialAd.show();
+                 } else {
+                     Log.d("TAG", "The interstitial wasn't loaded yet.");
+                 }
 
              }
          });

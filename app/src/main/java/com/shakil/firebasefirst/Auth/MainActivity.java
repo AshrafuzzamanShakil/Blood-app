@@ -3,6 +3,7 @@ package com.shakil.firebasefirst.Auth;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
 
 
@@ -55,13 +58,15 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferenceLogin = new SharedPreferenceLogin(this);
 
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
+        MobileAds.initialize(this);
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-4187023831811200/3775897827");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
 
@@ -69,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SingUp_activity.class));
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Forgot_pass_activity.class));
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
 
             }
         });

@@ -42,6 +42,7 @@ public class Search extends AppCompatActivity {
     private AdView mAdView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +54,11 @@ public class Search extends AppCompatActivity {
         progressBar=findViewById(R.id.progressid);
         spinner=findViewById(R.id.spinerid);
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
-
+        MobileAds.initialize(this);
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
 
 
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.Area,R.layout.spiner_layout);

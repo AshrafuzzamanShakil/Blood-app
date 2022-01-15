@@ -49,9 +49,7 @@ public class SingUp_activity extends AppCompatActivity {
             }
         });
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
+        MobileAds.initialize(this);
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

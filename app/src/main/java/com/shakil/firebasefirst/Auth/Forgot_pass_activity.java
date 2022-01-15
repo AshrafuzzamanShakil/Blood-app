@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,6 +30,7 @@ public class Forgot_pass_activity extends AppCompatActivity {
     private ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
     private AdView mAdView;
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -46,12 +48,13 @@ public class Forgot_pass_activity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
 
 
-        MobileAds.initialize(this,"ca-app-pub-4187023831811200~6769786275"
-
-        );
+        MobileAds.initialize(this);
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
