@@ -83,7 +83,7 @@
     <ListView
         android:id="@+id/listviewId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="10dp">
 
     </ListView>
@@ -92,10 +92,9 @@
         android:id="@+id/adView"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_height="60dp"
         ads:adSize="BANNER"
+        android:layout_marginBottom="20sp"
         ads:adUnitId="ca-app-pub-4187023831811200/8726220996">
     </com.google.android.gms.ads.AdView>
 
